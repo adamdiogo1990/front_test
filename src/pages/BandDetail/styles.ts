@@ -23,6 +23,7 @@ export const HeaderImage = styled.div<HeaderImageProps>`
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
+  position: relative;
 
   h2 {
     font-size: 28px;
@@ -34,7 +35,12 @@ export const HeaderImage = styled.div<HeaderImageProps>`
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 2px solid #000;
+    border: 3px solid #fff;
+    bottom: -20px;
+    position: absolute;
+    -webkit-box-shadow: 0px -1px 9px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px -1px 9px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px -1px 9px 0px rgba(0,0,0,0.33);
   }
 `;
 

@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import BandList from '../../components/BandList';
 import { Band } from '../../core/interfaces/Band';
-import { Header, HomeContainer } from './styles';
+import { BoxSearch, Header, HomeContainer } from './styles';
 
 const Home: React.FC = () => {
     const apiKey = process.env.REACT_APP_BASE_URL;
@@ -42,19 +42,23 @@ const Home: React.FC = () => {
     
     return (
         <HomeContainer>
-        <Header>
-            <input
-                type="text"
-                placeholder="Pesquisar banda"
-                value={searchText}
-                onChange={handleSearch}
-            />
-            <select value={sortBy} onChange={handleSortChange}>
-                <option value="popularidade">Popularidade</option>
-                <option value="alfabetica">Ordem Alfabética</option>
-            </select>
-        </Header>
-        <BandList bands={sortedBands} />
+            <Header>
+                <BoxSearch>
+                    
+                    <input
+                        type="text"
+                        placeholder="Pesquisar banda"
+                        value={searchText}
+                        onChange={handleSearch}
+                    />
+                </BoxSearch>
+                
+                <select value={sortBy} onChange={handleSortChange}>
+                    <option value="popularidade">Popularidade</option>
+                    <option value="alfabetica">Ordem Alfabética</option>
+                </select>
+            </Header>
+            <BandList bands={sortedBands} />
         </HomeContainer>
     );
 };

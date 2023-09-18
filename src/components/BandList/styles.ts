@@ -8,6 +8,10 @@ export const BandListContainer = styled.div`
   justify-content: space-between;
   padding-top: 100px;
   flex-direction: column;
+  
+  a{
+    text-decoration: none;
+  }
 `;
 
 export const BandInfo = styled.div`
@@ -26,15 +30,19 @@ export const BandInfo = styled.div`
 `;
 
 export const BandCard = styled.div`
-  margin-bottom: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%);
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   height: 50px; 
   gap: 20px;
+  
+  -webkit-box-shadow: 0px 0px 26px -11px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 26px -11px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 26px -11px rgba(0,0,0,0.15);
+
   img {
     width: 100px
     border-radius: 5px;
